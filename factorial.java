@@ -1,13 +1,32 @@
+import java.util.*;
 class Factorial
 {  
  public static void main(String args[])
  {  
-  int i,fact=1;  
-  int number=5;
-  for(i=1;i<=number;i++)
-    {
-      fact=fact*i;    
-  }    
-  System.out.println("Factorial of "+number+" is: "+fact);    
- }  
-}  
+ int number;
+ long fact;
+ Scanner input=new Scanner(System.in);
+ System.out.println("enter Value");
+ number=Integer.parseInt(input.next());
+ fact=multiplynum(number);
+ System.out.println("Factorial of"+ number+" is:"+fact);
+ }
+ public static long multiplynum(int num)
+ {
+  if (num>1)
+  {
+	  return num*multiplynum(num -1);
+  }
+  else
+  {return 1;
+  }
+ }
+}
+
+
+
+   
+
+
+   
+
